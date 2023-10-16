@@ -7,6 +7,7 @@ import './assets/css/feathericon.min.css'
 import './assets/css/font-awesome.min.css'
 import './assets/css/select2.min.css'
 import './assets/css/style.css'
+import './assets/plugins/datatables/datatables.min.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

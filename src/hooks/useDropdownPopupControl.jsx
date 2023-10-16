@@ -4,7 +4,6 @@ const useDropdownPopupControl = () => {
     const [isOpen, setIsOpen] = useState(false);
     const dropDownRef = useRef(null)
 
-    console.log(dropDownRef.current);
 
     // toogle menu
     const toogleMenu = () => {

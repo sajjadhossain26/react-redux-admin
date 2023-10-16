@@ -47,7 +47,7 @@ const Header = () => {
 
                 {/* <!-- Notifications --> */}
                 <li className="nav-item dropdown noti-dropdown" ref={notificationRef}>
-                    <a onClick={notificationMenu} href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
+                    <a onClick={notificationMenu} href="#" className="dropdown-toggle nav-link">
                         <i className="fe fe-bell"></i> <span className="badge badge-pill">3</span>
                     </a>
                   {
@@ -122,7 +122,7 @@ const Header = () => {
                 
                 {/* <!-- User Menu --> */}
                 <li className="nav-item dropdown has-arrow" ref={dropDownRef}>
-                    <a onClick={toogleMenu} href="#" className="dropdown-toggle nav-link" data-toggle="dropdown">
+                    <a onClick={toogleMenu} href="#" className="dropdown-toggle nav-link">
                         <span className="user-img"><img className="rounded-circle" src={avatar1} width="31" alt="Ryan Taylor"/></span>
                     </a>
                   {
