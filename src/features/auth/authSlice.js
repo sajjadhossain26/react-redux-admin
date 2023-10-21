@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createUser } from "./authApiSlice";
+import { createUser, loginUser, logoutUser } from "./authApiSlice";
 
 // Create auth slice
 
@@ -19,12 +19,27 @@ const authSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(createUser.rejected,(state, action) => {
+        builder
+        .addCase(createUser.rejected,(state, action) => {
             state.error = action.error.message
         })
 
-         builder.addCase(createUser.fulfilled,(state, action) => {
+        .addCase(createUser.fulfilled,(state, action) => {
             state.message = action.payload.message
+        })
+         .addCase(loginUser.rejected,(state, action) => {
+            state.error = action.error.message
+        })
+         .addCase(loginUser.fulfilled,(state, action) => {
+            state.message = action.payload.message
+            state.user = action.payload.user
+        })
+            .addCase(logoutUser.rejected,(state, action) => {
+            state.error = action.error.message
+        })
+         .addCase(logoutUser.fulfilled,(state, action) => {
+            state.message = action.payload.message
+            state.user = action.payload.user
         })
     },
 });

@@ -31,9 +31,9 @@ const Register = () => {
       return createToast('All Fields are required!', 'error')
     }
     if (input.password != input.cpassword) {
-      return standardSweetalert(
-        { title: "Password Error", msg: "Confirm Password not match" },
-        "error"
+      return createToast( 
+        "Confirm password not match",
+        "warn"
       );
     } else {
       dispatch(
