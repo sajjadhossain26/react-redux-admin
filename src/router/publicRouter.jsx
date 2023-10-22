@@ -3,9 +3,13 @@
 import Forgot from "../pages/auth/Forgot";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
+import PublicGard from "./publicGard";
 
 const publicRouter = [
-    {
+   {
+     element: <PublicGard/>,
+     children: [
+        {
         path:"/login",
         element: <Login/>,
     },
@@ -17,6 +21,8 @@ const publicRouter = [
         path: "/forgot",
         element: <Forgot/>
     }
+    ]
+   }
 ];
 
 // export router
